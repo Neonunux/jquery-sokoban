@@ -1,0 +1,26 @@
+{
+  "name": "jquery-sokoban",
+  "version": "1.0.0",
+  "description": "An implementation of Sokōban in JavaScript, as a [jQuery] plugin. It parses and runs the de-facto standardized Sokoban puzzle notation, is capable of running multiple games and includes a separate undo buffer for each one. It's about 300 lines of code.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Neonunux/jquery-sokoban.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Neonunux/jquery-sokoban/issues"
+  },
+  "homepage": "https://github.com/Neonunux/jquery-sokoban#readme",
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-standard": "^3.0.1"
+  },
+  "dependencies": {}
+}
