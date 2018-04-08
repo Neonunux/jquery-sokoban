@@ -31,8 +31,12 @@
     this.original = this.level.text()
     var ok = this.processLevelData()
     if (ok) {
-      this.level.bind('keydown', function (e) { // keypress doesn't work in safari
-        $(this).data('sokoban').keyHandler(e)
+      this.level.bind('keydown', function (event) { // keypress doesn't work in safari
+        $(this).data('sokoban').keyHandler(event)
+        return false
+      })
+      this.level.bind('wheel', function (event) {
+        $(this).data('sokoban').wheelHandler(event)
         return false
       })
     }
@@ -257,6 +261,12 @@
         this.level.trigger('solved')
         this.level.addClass(_CLS + 'solved')
         this.undoBuffer = []
+      }
+    },
+    wheelHandler: function (event) {
+      event.preventDefault()
+      if (event.originalEvent.deltaY >= 0) {
+        this.undoPop()
       }
     }
   }
