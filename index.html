@@ -11,6 +11,7 @@
 
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
   <!-- <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script> -->
+  <script src="node_modules/easystarjs/bin/easystar-0.4.3.min.js"></script>
   <script src="js/jquery.processEach.js"></script>
   <script src="js/jquery.sokoban.js"></script>
 
@@ -87,17 +88,17 @@
   <script>
     jQuery(function () {
 
-      var levels = $('pre.sokoban.level');
+      var levels = $('pre.sokoban.level')
 
       levels
         .processEach(function () {
-          $(this).sokoban();
+          $(this).sokoban()
         })
         .bind('keydown', function (e) {
           if (e.keyCode == 9) { // tab
-            var i = (levels.length + (levels.index(this) + (e.shiftKey ? -1 : 1))) % levels.length;
-            var o = levels.eq(i).find('.soko-room:first').focus();
-            $(window).scrollTop(levels.eq(i).offset().top);
+            var i = (levels.length + (levels.index(this) + (e.shiftKey ? -1 : 1))) % levels.length
+            var o = levels.eq(i).find('.soko-room:first').focus()
+            $(window).scrollTop(levels.eq(i).offset().top)
           }
         })
         .eq(0)
@@ -114,24 +115,17 @@
       }
 
       function clickManager(event) {
-        // console.log('click', event.clientX, event.clientY, event.x, event.y, event)
 
-        // let docElem = document.documentElement,
-        //   body = document.body,
-        //   win = window,
-        //   clientTop = docElem.clientTop || body.clientTop || 0,
-        //   clientLeft = docElem.clientLeft || body.clientLeft || 0,
-        //   scrollTop = win.pageYOffset || jQuery.support.boxModel && docElem.scrollTop || body.scrollTop,
-        //   scrollLeft = win.pageXOffset || jQuery.support.boxModel && docElem.scrollLeft || body.scrollLeft,
-        //   top = box.top + scrollTop - clientTop,
-        //   left = box.left + scrollLeft - clientLeft;
-
-        // console.log('click', top, left)
       }
 
-      // document.getElementsByClassName('soko-room')[0].addEventListener('wheel', wheelManager);
-      document.getElementsByClassName('soko-room')[0].addEventListener('click', clickManager);
-    });
+      // function printMousePos(event) {
+      //   console.log(`clientX: ${document.body.clientTop} - clientY: ${event.clientY}`)
+      // }
+
+      // document.addEventListener("click", printMousePos);
+      // document.getElementsByClassName('soko-room')[0].addEventListener('wheel', wheelManager)
+      // document.getElementsByClassName('soko-room')[0].addEventListener('click', clickManager)
+    })
   </script>
 </body>
 

@@ -207,6 +207,12 @@ doctrine@^2.1.0:
   dependencies:
     esutils "^2.0.2"
 
+easystarjs@^0.4.3:
+  version "0.4.3"
+  resolved "https://registry.yarnpkg.com/easystarjs/-/easystarjs-0.4.3.tgz#0a33d2db2dd607f30fcf6adbf2c0f832a0a88952"
+  dependencies:
+    heap "0.2.6"
+
 escape-string-regexp@^1.0.2, escape-string-regexp@^1.0.5:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz#1b61c0562190a8dff6ae3bb2cf0200ca130b86d4"
@@ -393,6 +399,10 @@ has-ansi@^2.0.0:
 has-flag@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/has-flag/-/has-flag-3.0.0.tgz#b5d454dc2199ae225699f3467e5a07f3b955bafd"
+
+heap@0.2.6:
+  version "0.2.6"
+  resolved "https://registry.yarnpkg.com/heap/-/heap-0.2.6.tgz#087e1f10b046932fc8594dd9e6d378afc9d1e5ac"
 
 iconv-lite@^0.4.17:
   version "0.4.19"
